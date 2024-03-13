@@ -4,9 +4,6 @@ import NavbarComponent from './components/NavbarComponent.vue';
 import CardComponent from './components/CardComponent.vue';
 const restauranteStore = useRestauranteStore();
 restauranteStore.getRestaurantes();
-const mostrarLocalizacao = () => {
-  console.log('Localizacao do restaurante tal');
-}
 </script>
 
 <template>
@@ -21,7 +18,7 @@ const mostrarLocalizacao = () => {
       <div class="container overflow-hidden text-center mt-4">
         <div class="row gy-5">
           <div v-for="(item, index) in restauranteStore.restaurantes" :key="index" class="col-3">
-            <CardComponent :titulo="item.titulo" :descricao="item.descricao" @mostrar-localizacao="mostrarLocalizacao"/>
+            <CardComponent :titulo="item.titulo" :descricao="item.descricao"/>
           </div>
         </div>
       </div>
