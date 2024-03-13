@@ -12,7 +12,7 @@ let tileLayer = null;
 const loading = ref(true);
 const initMap = () => {
     loading.value = true;
-    map = L.map("map").setView([-0.1306783854436242, -67.08850595028112], 16);
+    map = L.map("map").setView([-3.120423436558969, -60.02375688899549], 13);
     tileLayer = L.tileLayer(
         "https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png",
         {
